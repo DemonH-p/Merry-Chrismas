@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<title>谷雨宝贝 Merry Christmas - 2022 by PH</title>
+	<!-- for dev -->
+	<link rel="stylesheet" href="src/css/christmas.css">
+	<link rel="stylesheet" href="src/css/animate.css">
+
+	<!-- for pro
+	<link rel="stylesheet" href="dist/css/app.css"> -->
+	<style>
+		.mydiv {
+			top: 15%;
+			left: 30%;
+			width: 60%;
+			height: 50%;
+			position: relative;
+		}
+
+		.text_content {
+			left: 6%;
+			position: relative;
+		}
+
+
+		.scanner {
+			--font-color: hsl(0, 64%, 76%);
+			--font-size: 25px;
+			--animation-duration: 2s;
+			--animation-iteration: 1;
+			display: inline-block;
+			background-color: var(--font-bgcolor);
+			background-image: var(--img-background);
+			background-size: 100% 100%;
+		}
+
+		.scanner div {
+			position: relative;
+			display: block;
+			margin: 0px calc(0.5*var(--font-size));
+			height: calc(var(--font-size) * 1.5);
+			line-height: calc(var(--font-size) * 1.5);
+			font-size: var(--font-size);
+			font-weight: bold;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-color: var(--font-bgcolor);
+			background-image: linear-gradient(var(--font-color), var(--font-color));
+			background-size: 0% 100%;
+			background-repeat: no-repeat;
+			-webkit-animation: printing var(--animation-duration) linear var(--animation-iteration);
+			animation-fill-mode: forwards;
+		}
+
+		.scanner div:nth-child(1) {
+			animation-delay: var(--animation-duration);
+		}
+
+		.scanner div:nth-child(2) {
+			animation-delay: calc(2*var(--animation-duration));
+		}
+
+		.scanner div:nth-child(3) {
+			animation-delay: calc(3*var(--animation-duration));
+		}
+
+		.scanner div:nth-child(4) {
+			animation-delay: calc(4*var(--animation-duration));
+		}
+
+		.scanner div:nth-child(5) {
+			animation-delay: calc(5*var(--animation-duration));
+		}
+
+		.scanner div:nth-child(6) {
+			animation-delay: calc(6*var(--animation-duration));
+		}
+
+		.scanner div:nth-child(7) {
+			animation-delay: calc(7*var(--animation-duration));
+		}
+
+		.scanner div:nth-child(8) {
+			animation-delay: calc(8*var(--animation-duration));
+		}
+
+		.scanner div:nth-child(9) {
+			text-align: right;
+			animation-delay: calc(9*var(--animation-duration));
+			-webkit-animation: printing var(1s);
+		}
+
+		.scanner div:nth-child(10) {
+			animation-delay: calc(10*var(--animation-duration));
+		}
+
+		@-webkit-keyframes printing {
+			0% {
+				background-size: 0% 100%;
+			}
+
+			100% {
+				background-size: 100% 100%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<section class="loading-mask">
+		<section class="loading">
+			<div class="progress">
+				<div class="progres-bar"><i class="icon-car"></i></div>
+			</div>
+			<p class="loading-text">努力加载中...</p>
+		</section>
+		<!-- end loading -->
+		<a href="javascript:;" class="playBgMusic animate-notifylight" id="j-playBgMusic">惊喜开始</a>
+	</section>
+
+	<section class="page out">
+		<section class="content">
+
+			<!-- animate class bigSnow-smallPos -->
+			<!-- 封面雪花图标 -->
+			<section class="bigSnow-panel j-bigSnow animate-bigSnowRotate transition">
+				<i class="img-bigSnow snow1 animate-bigSnow1Change transition"></i>
+				<i class="img-bigSnow snow2 animate-bigSnow2Change transition"></i>
+				<i class="img-bigSnow snow3 animate-bigSnow3Change transition"></i>
+			</section>
+
+			<!-- 播放动画 -->
+			<canvas class="canvas"></canvas>
+
+			<div class="help" style="display:none;">?</div>
+
+			<div class="ui" style="display:none;">
+				<input class="ui-input" type="text" />
+				<span class="ui-return">↵</span>
+			</div>
+
+			<div class="overlay">
+				<div class="tabs">
+					<div class="tabs-labels"><span class="tabs-label">Commands</span><span
+							class="tabs-label">Info</span><span class="tabs-label">Share</span></div>
+
+					<div class="tabs-panels">
+						<ul class="tabs-panel commands">
+							<li class="commands-item"><span class="commands-item-title">Text</span><span
+									class="commands-item-info" data-demo="Hello :)">Type anything</span><span
+									class="commands-item-action">Demo</span></li>
+							<li class="commands-item"><span class="commands-item-title">Countdown</span><span
+									class="commands-item-info" data-demo="#countdown 10">#countdown<span
+										class="commands-item-mode">number</span></span><span
+									class="commands-item-action">Demo</span></li>
+							<li class="commands-item"><span class="commands-item-title">Time</span><span
+									class="commands-item-info" data-demo="#time">#time</span><span
+									class="commands-item-action">Demo</span></li>
+							<li class="commands-item"><span class="commands-item-title">Rectangle</span><span
+									class="commands-item-info" data-demo="#rectangle 30x15">#rectangle<span
+										class="commands-item-mode">width x height</span></span><span
+									class="commands-item-action">Demo</span></li>
+							<li class="commands-item"><span class="commands-item-title">Circle</span><span
+									class="commands-item-info" data-demo="#circle 25">#circle<span
+										class="commands-item-mode">diameter</span></span><span
+									class="commands-item-action">Demo</span></li>
+
+							<li class="commands-item commands-item--gap"><span
+									class="commands-item-title">Animate</span><span class="commands-item-info"
+									data-demo="The time is|#time|#countdown 3|#icon thumbs-up"><span
+										class="commands-item-mode">command1</span>&nbsp;|<span
+										class="commands-item-mode">command2</span></span><span
+									class="commands-item-action">Demo</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- animate class show
+			<div class="banner-panel j-banner opacity0 animated">
+				<span class="textMask mask1 j-textmask1"><i class="transition"></i></span>
+				<span class="textMask mask2 j-textmask2"><i class="transition"></i></span>
+				<span class="textMask mask3 j-textmask3"><i class="transition"></i></span> -->
+			<!-- <i class="img-glove animate-gloveSwing"></i> -->
+			<!-- <div class="mydiv">
+					<div class="scanner">
+						<div>亲爱的XXX,</div>
+						<div class="text_content">见字如晤，展信舒颜。</div>
+						<div class="text_content">每年圣诞节我都一样平淡的过，因为有了你，今年的圣诞节额外与众不同。</div>
+						<div class="text_content">但遗憾的是，我今年不能陪伴在你身边度过这个特别的节日。</div>
+						<div class="text_content">因此只能用此方式表达我的思念。</div>
+						<div class="text_content">我愿意陪你熬过寒冬，一起迎接万物复苏的春日。</div>
+						<div class="text_content">我已向圣诞老人真诚许愿，期待着能陪伴在你身边的那一天早日到来。</div>
+						<div class="text_content">在此祝愿你能天天开心，平安快乐!愿我的祝福能带给你温暖。</div>
+						<div calss="text_endingname"> 爱你的红红</div>
+					</div>
+				</div>
+			</div> -->
+
+
+			<i class="img-tree left opacity0 transition tn j-tree-left"></i>
+			<i class="img-tree right opacity0 transition tn j-tree-right"></i>
+			<!-- end trees -->
+
+			<section class="bag-panel opacity0 animated j-bag">
+				<i class="img-gift gift1 j-gift1 opacity0 animated"></i>
+				<i class="img-gift gift2 j-gift2 opacity0 animated"></i>
+				<i class="img-gift gift3 j-gift3 opacity0 animated"></i>
+			</section>
+			<!-- end bag-panel -->
+
+			<i class="img-stars opacity0 animated j-stars"></i>
+			<i class="content-bg opacity0 animated j-bottomBg"></i>
+		</section>
+		<!-- end content -->
+
+
+	</section>
+
+
+
+	<!-- 结束动画 -->
+
+	<audio id="bgmusci" preload="load" loop="loop">
+		<source src="main.mp3" type="audio/mpeg" />
+	</audio>
+
+	<script src="src/js/index.js"></script>
+	<!-- for dev -->
+	<script src="src/js/zepto-min.js"></script>
+	<script src="src/js/snowstorm.js"></script>
+	<script src="src/js/christmas.js"></script>
+	<script>
+		ISPRO = false;
+	</script>
+
+	<!-- for pro -->
+	<!-- <script src="dict/js/app.js"></script> -->
+	<!-- <script>
+		ISPRO = true;
+	</script> -->
+
+
+
+</body>
+
+</html>
