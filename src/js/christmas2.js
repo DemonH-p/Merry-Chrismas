@@ -57,15 +57,7 @@ $(function () {
 	animates.step5 = function () {
 		var $banner = $(".j-banner");
 		$banner.addClass("opacity1 flipInX").one(animateEvents, animates.step6);
-	}
-	// 显示出banner
-	// setTimeout(function () {
-	// 	//add your code
-	// 	animates.step5 = function () {
-	// 		var $banner = $(".j-banner");
-	// 		$banner.addClass("opacity1 flipInX").one(animateEvents, animates.step6);
-	// 	}
-	// }, 5 * 1000);
+	};
 
 
 	// 逐行显示文字

@@ -27,7 +27,7 @@ var S = {
             setTimeout(function () {
                 //add your code
                 S.UI.simulate('#circle|亲爱的|谷雨宝贝|现在是|北京时间|#time|我将用|我的方式|表达对你|圣诞祝福|#countdown 5|#show', 3000);
-            }, 5500);//延迟5000毫秒
+            }, 4500);//延迟5000毫秒
         }
         S.Drawing.loop(function () {
             S.Shape.render();
@@ -113,7 +113,7 @@ S.UI = (function () {
         currentAction,
         resizeTimer,
         time,
-        maxShapeSize = 30,
+        maxShapeSize = 15,
         firstAction = true,
         sequence = [],
         cmd = '#';
@@ -737,4 +737,4 @@ S.Shape = (function () {
 }());
 
 
-S.init();
+// S.init();

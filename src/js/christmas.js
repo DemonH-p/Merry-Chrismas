@@ -1,6 +1,8 @@
 /*
  * merry christmas
 */
+document.write(" < script language = javascript src = './index.js' >< / script>");
+
 $(function () {
 	var animates = {},//动画集合
 		animateEvents = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oAnimationend Animationend",
@@ -121,10 +123,12 @@ $(function () {
 
 	// 点击播放背景音乐并显示贺卡
 	$('#j-playBgMusic').click(function () {
+		S.init();
 		$(".loading-mask").addClass("outLeft");
 		$(".page").addClass("in");
 		setTimeout(animates.step1, 300);
 		$("#bgmusci")[0].play();
+
 	});
 
 });
