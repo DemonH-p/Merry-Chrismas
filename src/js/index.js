@@ -498,10 +498,10 @@ S.Dot.prototype = {
 
 
 S.ShapeBuilder = (function () {
-    var gap = 13,
+    var gap = 10,
         shapeCanvas = document.createElement('canvas'),
         shapeContext = shapeCanvas.getContext('2d'),
-        fontSize = 500,
+        fontSize = 200,
         fontFamily = 'Avenir, Helvetica Neue, Helvetica, Arial, sans-serif';
 
     function fit() {
@@ -585,7 +585,7 @@ S.ShapeBuilder = (function () {
         },
 
         circle: function (d) {
-            var r = Math.max(0, d) / 2;
+            var r = Math.max(0, d);
             shapeContext.clearRect(0, 0, shapeCanvas.width, shapeCanvas.height);
             shapeContext.beginPath();
             shapeContext.arc(r * gap, r * gap, r * gap, 0, 2 * Math.PI, false);
@@ -661,7 +661,7 @@ S.Shape = (function () {
         switchShape: function (n, fast) {
             var size,
                 a = S.Drawing.getArea();
-
+            // 位置
             width = n.w;
             height = n.h;
 
@@ -676,7 +676,7 @@ S.Shape = (function () {
 
             var d = 0,
                 i = 0;
-
+            // 问题在这
             while (n.dots.length > 0) {
                 i = Math.floor(Math.random() * n.dots.length);
                 dots[d].e = fast ? 0.25 : (dots[d].s ? 0.14 : 0.11);
