@@ -140,16 +140,15 @@ input{outline:none;-webkit-appearance : none ;}
 	position: absolute;
 	bottom:50%;
 	left:40%;
-	/* margin-left: 0; */
 	width:20%;
 	height: 10%;
-	line-height: 60px;
+	line-height: 70px;
 	background: #de6486;
 	color: rgb(255, 255, 255);
 	text-align: center;
 	border-radius:5px;
 	z-index: 999999;
-	font-size:xx-large
+	font-size:x-large
 }
 /*icon-car*/
 .icon-car{
