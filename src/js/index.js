@@ -26,7 +26,7 @@ var S = {
         } else {
             setTimeout(function () {
                 //add your code
-                S.UI.simulate('#circle|亲爱的|谷雨宝贝|现在是|北京时间|#time|我将用|我的方式|表达对你|圣诞祝福|#countdown 5|#show', 3500);
+                S.UI.simulate('#circle|亲爱的|谷雨宝贝|现在是|北京时间|#time|我将用|我的方式|表达对你|圣诞祝福|#countdown 3|#show', 4000);
             }, 4500);//延迟5000毫秒
         }
         S.Drawing.loop(function () {
@@ -188,7 +188,7 @@ S.UI = (function () {
                             } else {
                                 S.Shape.switchShape(S.ShapeBuilder.letter(index), true);
                             }
-                        }, 1000, value, true);
+                        }, 1500, value, true);
                         break;
 
                     case 'rectangle':
