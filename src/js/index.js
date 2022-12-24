@@ -498,10 +498,10 @@ S.Dot.prototype = {
 
 
 S.ShapeBuilder = (function () {
-    var gap = 13,
+    var gap = 11,
         shapeCanvas = document.createElement('canvas'),
         shapeContext = shapeCanvas.getContext('2d'),
-        fontSize = 300,
+        fontSize = 275,
         fontFamily = 'Avenir, Helvetica Neue, Helvetica, Arial, sans-serif';
 
     function fit() {
